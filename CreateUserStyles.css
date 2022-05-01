@@ -89,3 +89,23 @@
     margin: 0px;
     padding: 100px;
 }
+
+.instruct {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 15px;
+    font-family: "Raleway", "Montserrat", "Source Sans Pro";
+    font-weight:normal;
+    font-size: 12px;
+    display: none;
+}
+
+.loadingimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    margin-top: 10px;
+    display: none;
+}

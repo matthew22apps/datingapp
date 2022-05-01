@@ -218,13 +218,3 @@ body {   padding: 0;   margin: 0;}
     margin:50px;
     padding:0px;
 }
-
-.instruct {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-top: 15px;
-    font-family: "Raleway", "Montserrat", "Source Sans Pro";
-    font-weight:normal;
-    font-size: 12px;
-}
