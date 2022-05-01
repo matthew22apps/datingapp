@@ -700,10 +700,12 @@ function view(){
         myuserid = JSON.parse(localStorage.getItem('userid'))
     }
     sessionmatchindex=0
+    massusers(100)
     CompareUsers(myuserid)
     change2()
     console.log(UsersandData)
     console.log(myuserid)
+    save()
 }
 window.onload = view;
 
@@ -759,8 +761,8 @@ function randomizefirstname(gender){ //Returns random answer from 0-3
 
 ////// Below this line adds people from form directly to the JS array!
     const thebutton=document.getElementById('submitbutton')
-    if (thebutton!==null){
-        thebutton.addEventListener('click', function () {
+    function buttonclickstart(){
+        document.getElementById("submitbutton").onclick = null;
         var inputgender = document.getElementById('gender').value;
         var inputfname = document.getElementById('fname').value;
         var inputage = document.getElementById('age').value;
@@ -959,16 +961,19 @@ function randomizefirstname(gender){ //Returns random answer from 0-3
         whoiswipedon: [],
         });
         massusers(99)
+        for (let m10 = 0; m10 < 9; m10++) {
+            massusers(100)
+            save()
+        }
         CompareUsers(howmanyuserstemp)
         console.log(UsersandData)
         save()
         saveuserid(howmanyuserstemp)
         // similar behavior as an HTTP redirect
-        window.location.replace("https://matthew22apps.github.io/datingapp/");
+        if (window.location === "https://matthew22apps.github.io/datingapp/CreateUser"){
+        window.location.replace("https://matthew22apps.github.io/datingapp/");}
+        else{window.location.replace("/index.html");}
         //UsersandData[howmanyuserstemp].agenumber=dataofbirth(UsersandData[howmanyuserstemp].birthmonth,UsersandData[howmanyuserstemp].birthday,UsersandData[howmanyuserstemp].birthyear)
-        
-
-    });
 }
 
 
@@ -980,9 +985,9 @@ function change2(){
     document.getElementById('fnameage').innerHTML = (UsersandData[sessionmatchid].firstname + ", " + UsersandData[sessionmatchid].agenumber);
 
     let tempA= UsersandData[myuserid].whoimatchwith[sessionmatchindex]
-    document.getElementById('compatibilityratio').innerHTML = ((tempA[2]*100) + "%");
+    document.getElementById('compatibilityratio').innerHTML = ((Math.round(tempA[2]*100)) + "%");
 
-    document.getElementById('topinfoagegendercompatibilitytext1').innerHTML = (UsersandData[sessionmatchid].agenumber + " | " + UsersandData[sessionmatchid].gender + " | " + (tempA[2]*100) + "% Compatible");
+    document.getElementById('topinfoagegendercompatibilitytext1').innerHTML = (UsersandData[sessionmatchid].agenumber + " | " + UsersandData[sessionmatchid].gender + " | " + (Math.round(tempA[2]*100)) + "% Compatible");
 
     document.getElementById('work1').innerHTML = (UsersandData[sessionmatchid].Profession)
 
