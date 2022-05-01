@@ -12,7 +12,29 @@ let QuestionPointValues=[
     2, //Question 5
     3, //Question 6
     4, //Question 7
-    1 //Question 8
+    1, //Question 8
+    2, //Question 9
+    6, //Question 10
+    1, //Question 11
+    1, //Question 12
+    3, //Question 13
+    5, //Question 14
+    2, //Question 15
+    3, //Question 16
+    4, //Question 17
+    1, //Question 18
+    2, //Question 19
+    6, //Question 20
+    1, //Question 21
+    1, //Question 22
+    3, //Question 23
+    5, //Question 24
+    2, //Question 25
+    3, //Question 26
+    4, //Question 27
+    1, //Question 28
+    2, //Question 29
+    6 //Question 30
 ]
 let QuestionsToAsk=[
     "This Is A String", //Question 1
@@ -73,7 +95,7 @@ function CreateUserRandomizer(){
     Political: randomizepolitics(),
     Vaxstatus: randomizevaxstatus(),
     profilepics: [randomizephoto(gender1),"N/A","N/A","N/A","N/A","N/A"],
-    question: [randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer()],
+    question: [randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer()],
     ////EVERYTHING Above this line is for editing THEIR info.
     //Everything BELOW this line is for "search settings"
     searchagerange: [agesearch,agesearch2], //min, max - 0,999 means "All"
@@ -915,7 +937,7 @@ function randomizefirstname(gender){ //Returns random answer from 0-3
         Political: inputPolitical,
         Vaxstatus: inputVaccinated,
         profilepics: [randomizephoto(inputgender),"N/A","N/A","N/A","N/A","N/A"],
-        question: [randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer()],
+        question: [randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer()],
         ////EVERYTHING Above this line is for editing THEIR info.
         //Everything BELOW this line is for "search settings"
         searchagerange: [inputminage,inputmaxage], //min, max - 0,999 means "All"
