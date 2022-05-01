@@ -753,6 +753,7 @@ window.onload = view;
 function cleardatabse(){
 localStorage.clear('data')
 localStorage.clear('userid')
+console.log("Account Reset")
 }
 
 
