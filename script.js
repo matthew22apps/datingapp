@@ -1018,8 +1018,10 @@ function haveiswipedonthem(tempmatchid){
 
 const swipebutton=document.getElementById('interestedbutt')
 const rejectbutton=document.getElementById('notinterestedbutt')
-swipebutton.addEventListener('click', function () {swipe()})
-rejectbutton.addEventListener('click', function () {swipe()})
+if (swipebutton!==null){
+swipebutton.addEventListener('click', function () {swipe()})}
+if (rejectbutton!==null){
+rejectbutton.addEventListener('click', function () {swipe()})}
 
 function swipe(){
     UsersandData[myuserid].whoiswipedon.push(sessionmatchid)
