@@ -1,0 +1,218 @@
+.TopBar{
+    margin: auto;
+    display: flex;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    /*
+    
+    padding-bottom: 20px;
+    background-color: #FFFFFF;
+    align-items: center;
+    gap: 0px;
+    flex-wrap: wrap;
+    */
+}
+
+.TopBarBackground{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+    background-image: linear-gradient(to right, rgb(225, 116, 255) , rgb(156, 237, 255));
+}
+
+.TopElement{
+    display: flex;
+    max-width: 50%;
+}
+
+.topimages{
+    width: 25px;
+    max-width: 100%;
+    height: auto;
+}
+
+body {   padding: 0;   margin: 0;}
+
+.mainimagecontainer {
+    width: 100%;
+  }
+  
+.MainImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.information { /* Set text color to red */
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+    bottom:55px;
+    background-color: white;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+ }
+
+.leftside {
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+#fnameage{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat";
+    font-weight:normal;
+    font-size: 25px;
+}
+
+.Check{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    width: 20px;
+    height: auto;
+    
+    padding-right: 10px;
+}
+
+.rightside{
+    margin-top: 20px;
+}
+
+#compatibilityratio{
+    margin: 0px;
+    padding: 0px;
+    color: rgb(219, 56, 255);
+    font-family: "Montserrat";
+    font-weight:normal;
+    font-size: 15px;
+    text-align: right;
+}
+
+.seewhy{
+    float: right;
+    margin: 0px;
+    margin-top: 5px;
+    font-size: 8px;
+    padding: 3px 15px 3px 15px;
+    background-color: rgb(219, 56, 255);
+    color: white;
+    border: 0px;
+    border-radius: 30px;
+}
+
+.whoiam{
+    width: 80%;
+    margin:auto;
+    margin-top: -15px;
+    padding: 20px;
+    background-color: rgb(222, 222, 222);
+    border-radius: 15px;
+
+}
+
+.topinfoagegendercompatibilitytext {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat";
+    font-weight:normal;
+    font-size: 16px;
+}
+
+.biglistinfo{
+    display: flex;
+    justify-content: left;
+    vertical-align: top;
+    align-items: flex-start;
+    margin-top: 5px;
+}
+
+.infotext {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 2px;
+    font-family: "Montserrat";
+    font-weight:normal;
+    font-size: 13px;
+}
+
+.infoicons{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 0px;
+    width: 20px;
+    height: auto;
+    
+    padding-right: 10px;
+}
+
+.infoiconsX{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 4px;
+    width: 12px;
+    height: auto;
+    
+    padding-right: 10px;
+}
+
+.infotextX {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 2px;
+    font-family: "Montserrat";
+    font-weight:normal;
+    font-size: 11px;
+}
+
+.spacer{
+    margin:0px;
+    padding:0px;
+}
+
+.interestedbutton {
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 100%;
+    width: 30px;
+    float: right;
+    margin-top: -25px;
+    margin-right: 50px;
+    
+
+}
+
+.notinterested{
+    margin-top: 50px;
+}
+
+.notinbutton{
+    display:block;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-size: 13px;
+    padding: 10px 30px 10px 30px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(167, 167, 167);
+    border-radius: 1px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+    border-radius: 10px;
+    font-family:'montserrat';
+}
+
+.spacerfinal{
+    margin:50px;
+    padding:0px;
+}

@@ -1,0 +1,90 @@
+
+.information { /* Set text color to red */
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+    bottom:55px;
+    background-color: white;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+ }
+
+.leftside {
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+#HeaderofPage{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat";
+    font-weight:normal;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.HeaderofPage2{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat";
+    font-weight:normal;
+    font-size: 25px;
+    text-align: center;
+}
+
+.Check{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    width: 20px;
+    height: auto;
+    
+    padding-right: 10px;
+}
+
+.inputs{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.divider{
+    width:50%;
+    background-color: black;
+    height: 2px;
+    margin: auto;
+}
+
+.checkboxprompt{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat";
+    font-weight:normal;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submitbutton{
+    display:block;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-size: 13px;
+    padding: 10px 30px 10px 30px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(167, 167, 167);
+    border-radius: 1px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+    border-radius: 10px;
+    font-family:'montserrat';
+}
+
+.spacerfinal1{
+    margin: 0px;
+    padding: 100px;
+}

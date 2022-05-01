@@ -1,0 +1,277 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="CreateUserStyles.css">
+        <link rel="stylesheet" href="styles.css">
+        <script
+            src="script.js">
+        </script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="TopBarBackground">
+            <div class="TopBar">
+                <div class="TopElement">
+                    <img class="topimages" src="ProfilePhotos/back.png">
+                </div>
+                <div class="TopElement">
+                    <img class="topimages" src="ProfilePhotos/Lightning.png">
+                </div>
+                <div class="TopElement">
+                    <img class="topimages" src="ProfilePhotos/Settings.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="headerofpage1" id="headerofpage1">
+            <h1 id="HeaderofPage">Welcome!</h1>
+            <h1 class="HeaderofPage2">Let's setup your profile!</h1>
+        </div>
+
+        <div class="inputs">
+            <label for="gender">Choose Your Gender:</label>
+            <select name="gender" id="gender">
+            <option value="Man">Man</option>
+            <option value="Woman">Woman</option>
+            </select>
+            <br>
+            <br>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname">
+            <br>
+            <br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age">
+            <br>
+            <br>
+            <label for="height">Height in Centimeters:</label>
+            <input type="number" id="height" name="height">
+            <br>
+            <br>
+            <label for="Profession">Profession:</label>
+            <select name="Profession" id="Profession">
+            <option value="Entrepreneur">Entrepreneur</option>
+            <option value="Corporate Worker">Corporate Worker</option>
+            <option value="Employee">Employee</option>
+            </select>
+            <br>
+            <br>
+            <label for="religion">Are You Spiritually Inclined?</label>
+            <select name="religion" id="religion">
+            <option value="Christian">Christian</option>
+            <option value="Athiest">Athiest</option>
+            <option value="Spiritual">Spiritual</option>
+            </select>
+            <br>
+            <br>
+            <label for="Ethnicity">Ethnicity:</label>
+            <select name="Ethnicity" id="Ethnicity">
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+            <option value="Asian">Asian</option>
+            </select>
+            <br>
+            <br>
+            <label for="Kids">Kids:</label>
+            <select name="Kids" id="Kids">
+            <option value="Have Kids">Have Kids</option>
+            <option value="Do Not Want Kids">Do Not Want Kids</option>
+            <option value="Want Kids Eventually">Want Kids Eventually</option>
+            </select>
+            <br>
+            <br>
+            <label for="Political">Political Views:</label>
+            <select name="Political" id="Political">
+            <option value="Conservative">Conservative</option>
+            <option value="Liberal">Liberal</option>
+            <option value="Do Not Care">Do Not Care</option>
+            </select>
+            <br>
+            <br>
+            <label for="Vaccinated">Are you Vaccinated?</label>
+            <select name="Vaccinated" id="Vaccinated">
+            <option value="Vaccinated">Vaccinated</option>
+            <option value="Unvaxxed">Unvaxxed</option>
+            </select>
+            <br>
+            <br>
+            <label for="smoking">Do you smoke?</label>
+            <select name="smoking" id="smoking">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Sometimes">Sometimes</option>
+            </select>
+            <br>
+            <br>
+            <label for="weed">Do you partake in the weed?</label>
+            <select name="weed" id="weed">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Sometimes">Sometimes</option>
+            </select>
+            <br>
+            <br>
+            <label for="drugs">Do you do drugs?</label>
+            <select name="drugs" id="drugs">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Sometimes">Sometimes</option>
+            </select>
+            <br>
+            <br>
+            <label for="drinking">Do you drink?</label>
+            <select name="drinking" id="drinking">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Sometimes">Sometimes</option>
+            </select>
+            <br>
+            <br>
+        </div>
+
+        <div class="divider"></div>
+        <br>
+        <div class="inputs">
+
+            <h1 class="HeaderofPage2">What are you looking for?</h1>
+            <br><br>
+            <label for="minage">Min Age Range:</label>
+            <input type="number" id="minage" name="minage">
+            <br>
+            <br>
+            <label for="maxage">Max Age Range:</label>
+            <input type="number" id="maxage" name="maxage">
+            <br>
+            <br>
+            <label for="minheight">Min Height (in cm):</label>
+            <input type="number" id="minheight" name="minheight">
+            <br>
+            <br>
+            <label for="maxheight">Max Height (in cm):</label>
+            <input type="number" id="maxheight" name="maxheight">
+            <br>
+            <br>
+            <h2 class="checkboxprompt">Matches who Smoke:</h2>
+            <input type="checkbox" id="smoking1" class="checkboxes" name="smoking1" value="Yes"> <!--Checkboxes!!-->
+            <label for="smoking1">Yes</label><br>
+            <input type="checkbox" id="smoking2" class="checkboxes" name="smoking2" value="No">
+            <label for="smoking2">No</label><br>
+            <input type="checkbox" id="smoking3" class="checkboxes" name="smoking3" value="Sometimes">
+            <label for="smoking3">Sometimes</label>
+            <br>
+            <br>
+            <h2 class="checkboxprompt">Matches who do the Weed:</h2>
+            <input type="checkbox" id="weed1" class="checkboxes" name="weed1" value="Yes"> <!--Checkboxes!!-->
+            <label for="weed1">Yes</label><br>
+            <input type="checkbox" id="weed2" class="checkboxes" name="weed2" value="No">
+            <label for="weed2">No</label><br>
+            <input type="checkbox" id="weed3" class="checkboxes" name="weed3" value="Sometimes">
+            <label for="weed3">Sometimes</label>
+            <br>
+            <br>
+            <h2 class="checkboxprompt">Matches who do Drugs:</h2>
+            <input type="checkbox" id="drugs1" class="checkboxes" name="drugs1" value="Yes"> <!--Checkboxes!!-->
+            <label for="drugs1">Yes</label><br>
+            <input type="checkbox" id="drugs2" class="checkboxes" name="drugs2" value="No">
+            <label for="drugs2">No</label><br>
+            <input type="checkbox" id="drugs3" class="checkboxes" name="drugs3" value="Sometimes">
+            <label for="drugs3">Sometimes</label>
+            <br>
+            <br>
+            <h2 class="checkboxprompt">Matches who Drink:</h2>
+            <input type="checkbox" id="drinking1" class="checkboxes" name="drinking1" value="Yes"> <!--Checkboxes!!-->
+            <label for="drinking1">Yes</label><br>
+            <input type="checkbox" id="drinking2" class="checkboxes" name="drinking2" value="No">
+            <label for="drinking2">No</label><br>
+            <input type="checkbox" id="drinking3" class="checkboxes" name="drinking3" value="Sometimes">
+            <label for="drinking3">Sometimes</label>
+            <br>
+            <br>
+            <h2 class="checkboxprompt">Compatible Professions:</h2>
+            <input type="checkbox" id="profession1" class="checkboxes" name="profession1" value="Entrepreneur"> <!--Checkboxes!!-->
+            <label for="profession1">Entrepreneur</label><br>
+            <input type="checkbox" id="profession2" class="checkboxes" name="profession2" value="Corporate Worker">
+            <label for="profession2">Corporate Worker</label><br>
+            <input type="checkbox" id="profession3" class="checkboxes" name="profession3" value="Employee">
+            <label for="profession3">Employee</label>
+            <br>
+            <br>
+            <h2 class="checkboxprompt">Compatible Religions:</h2>
+            <input type="checkbox" id="religion1" class="checkboxes" name="religion1" value="Christian"> <!--Checkboxes!!-->
+            <label for="religion1">Christian</label><br>
+            <input type="checkbox" id="religion2" class="checkboxes" name="religion2" value="Athiest">
+            <label for="religion2">Athiest</label><br>
+            <input type="checkbox" id="religion3" class="checkboxes" name="religion3" value="Spiritual">
+            <label for="religion3">Spiritual</label>
+            <br>
+            <br>
+            <h2 class="checkboxprompt">Desired Ethnicity:</h2>
+            <input type="checkbox" id="ethnicity1" class="checkboxes" name="ethnicity1" value="Black"> <!--Checkboxes!!-->
+            <label for="ethnicity1">Christian</label><br>
+            <input type="checkbox" id="ethnicity2" class="checkboxes" name="ethnicity2" value="White">
+            <label for="ethnicity2">Athiest</label><br>
+            <input type="checkbox" id="ethnicity3" class="checkboxes" name="ethnicity3" value="Asian">
+            <label for="ethnicity3">Spiritual</label>
+            <br>
+            <br>
+            <h2 class="checkboxprompt">Kid Compatibility:</h2>
+            <input type="checkbox" id="kids1" class="checkboxes" name="kids1" value="Have Kids"> <!--Checkboxes!!-->
+            <label for="kids1">Have Kids</label><br>
+            <input type="checkbox" id="kids2" class="checkboxes" name="kids2" value="Do Not Want Kids">
+            <label for="kids2">Do Not Want Kids</label><br>
+            <input type="checkbox" id="kids3" class="checkboxes" name="kids3" value="Want Kids Eventually">
+            <label for="kids3">Want Kids Eventually</label>
+            <br>
+            <br>
+            <h2 class="checkboxprompt">Political Compatibility:</h2>
+            <input type="checkbox" id="political1" class="checkboxes" name="political1" value="Conservative"> <!--Checkboxes!!-->
+            <label for="political1">Conservative</label><br>
+            <input type="checkbox" id="political2" class="checkboxes" name="political2" value="Liberal">
+            <label for="political2">Liberal</label><br>
+            <input type="checkbox" id="political3" class="checkboxes" name="political3" value="Do Not Care">
+            <label for="political3">People who Chose 'Do Not Care'</label>
+            <br>
+            <br>
+            <h2 class="checkboxprompt">Vaccinated Preferences:</h2>
+            <input type="checkbox" id="vaccinated1" class="checkboxes" name="vaccinated1" value="Vaccinated"> <!--Checkboxes!!-->
+            <label for="vaccinated1">Vaccinated</label><br>
+            <input type="checkbox" id="vaccinated2" class="checkboxes" name="vaccinated2" value="Unvaxxed">
+            <label for="vaccinated2">Unvaxxed</label><br>
+            <br>
+            <br>
+        </div>
+
+        <button class="submitbutton">Submit</button>
+
+        <div class="spacerfinal1">
+            
+        </div>
+
+        <script>
+            var inputBox = document.getElementById('fname'); //This allows a change to the main header-text! :)
+            inputBox.onkeyup = function(){
+                document.getElementById('HeaderofPage').innerHTML = ("Welcome " + inputBox.value + "!");
+            }
+
+            function togglecheckboxes(){
+                var cbarray = document.getElementsByClassName("checkboxes");
+                for(var i = 0; i < cbarray.length; i++){
+                    var cb = document.getElementById(cbarray[i].id);
+                    cb.checked = true
+                }
+            }
+            window.onload = togglecheckboxes;
+        </script>
+
+
+
+
+
+       <!-- <button onclick=AddAnswer(2,4)>Llama Power!!</button> Requires BOTH 2,4 (Question, Choice in Multiple Choice)--> 
+    </body>
+    </html>
+
+    
