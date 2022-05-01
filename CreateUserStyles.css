@@ -21,7 +21,7 @@
 #HeaderofPage{
     margin: 0px;
     padding: 0px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", "Source Sans Pro", "Raleway";
     font-weight:normal;
     font-size: 25px;
     text-align: center;
@@ -31,7 +31,7 @@
 .HeaderofPage2{
     margin: 0px;
     padding: 0px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", "Source Sans Pro", "Raleway";
     font-weight:normal;
     font-size: 25px;
     text-align: center;
@@ -62,7 +62,7 @@
 .checkboxprompt{
     margin: 0px;
     padding: 0px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", "Source Sans Pro", "Raleway";
     font-weight:normal;
     font-size: 18px;
     text-align: center;
@@ -81,7 +81,7 @@
     border-color: rgb(167, 167, 167);
     border-style: solid;
     border-radius: 10px;
-    font-family:'montserrat';
+    font-family: "Montserrat", "Source Sans Pro", "Raleway";
 }
 
 .spacerfinal1{
