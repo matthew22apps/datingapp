@@ -1,6 +1,9 @@
 let AnswerArray=[]
 let UsersandData=[]
 let founddealbreaker=0
+let sessionmatchid=0
+let sessionmatchindex=0
+let myuserid=999 //placeholder
 let QuestionPointValues=[
     1, //Question 1
     1, //Question 2
@@ -69,7 +72,7 @@ function CreateUserRandomizer(){
     Children: randomizechildren(),
     Political: randomizepolitics(),
     Vaxstatus: randomizevaxstatus(),
-    profilepics: ["randomizephoto(gender1)","N/A","N/A","N/A","N/A","N/A"],
+    profilepics: [randomizephoto(gender1),"N/A","N/A","N/A","N/A","N/A"],
     question: [randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer()],
     ////EVERYTHING Above this line is for editing THEIR info.
     //Everything BELOW this line is for "search settings"
@@ -89,11 +92,12 @@ function CreateUserRandomizer(){
     searchVaxstatus: searchrandomizevaxstatus(), //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
     ///Last thing is who they matched with!!
     whoimatchwith: [],
+    whoiswipedon: [],
     });
     //UsersandData[howmanyuserstemp].agenumber=dataofbirth(UsersandData[howmanyuserstemp].birthmonth,UsersandData[howmanyuserstemp].birthday,UsersandData[howmanyuserstemp].birthyear)
 }
 
-
+/*
 function CreateUser(){
     ///FIRST we're going to assign their ID (Place in array) for easier lookup later.
     let howmanyuserstemp=UsersandData.length
@@ -148,11 +152,13 @@ function CreateUser(){
     searchVaxstatus: ["Unvaxxed"], //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
     ///Last thing is who they matched with!!
     whoimatchwith: [],
+    whoiswipedon: [],
     });
     UsersandData[howmanyuserstemp].agenumber=dataofbirth(UsersandData[howmanyuserstemp].birthmonth,UsersandData[howmanyuserstemp].birthday,UsersandData[howmanyuserstemp].birthyear)
     CompareUsers(howmanyuserstemp)
     console.log(UsersandData)
 }
+*/
 
 function AddAnswer(QuestionNumber,AnswerNumber){ //This function updates the associated answer on a contact-record. Requires BOTH Question # + Choice # in Multiple Choice
     UsersandData[0].question[QuestionNumber-1]=(AnswerNumber)
@@ -588,6 +594,16 @@ function checkfordealbreaker(userid,matchid){ //Ensures No Dealbreakers
     foundDealbreaker()
     }
 
+    //Search People I've Already Matched With
+    if (UsersandData[userid].whoimatchwith!=undefined){
+        for (let i = 0; i < UsersandData[userid].whoimatchwith.length; i++) {
+            if (UsersandData[userid].whoimatchwith[i] === matchid){
+                foundDealbreaker()
+                break
+            } 
+        }
+    }
+
 
     //Search Vaxstatus
     if (UsersandData[userid].searchVaxstatus!=undefined){
@@ -616,6 +632,9 @@ function checkfordealbreaker(userid,matchid){ //Ensures No Dealbreakers
     
 }
 
+
+
+
 function foundDealbreaker(){
     founddealbreaker=1
 }
@@ -641,16 +660,34 @@ function save(){
     }
     localStorage.setItem('data',JSON.stringify(UsersandData))
 }
+
+function saveuserid(idpass){
+
+    if(localStorage.getItem('userid')== null){
+        localStorage.setItem('userid','[]');
+    }
+    localStorage.setItem('userid',JSON.stringify(idpass))
+}
+
 function view(){
     if(localStorage.getItem('data') != null){
         UsersandData = JSON.parse(localStorage.getItem('data'))
     }
+    
+    if(localStorage.getItem('userid') != null){
+        myuserid = JSON.parse(localStorage.getItem('userid'))
+    }
+    sessionmatchindex=0
+    CompareUsers(myuserid)
+    change2()
     console.log(UsersandData)
+    console.log(myuserid)
 }
 window.onload = view;
 
 function cleardatabse(){
 localStorage.clear('data')
+localStorage.clear('userid')
 }
 
 
@@ -695,3 +732,323 @@ function randomizefirstname(gender){ //Returns random answer from 0-3
         return(items[Math.floor(Math.random() * items.length)])
     }
 }
+
+
+
+////// Below this line adds people from form directly to the JS array!
+    const thebutton=document.getElementById('submitbutton')
+    if (thebutton!==null){
+        thebutton.addEventListener('click', function () {
+        var inputgender = document.getElementById('gender').value;
+        var inputfname = document.getElementById('fname').value;
+        var inputage = document.getElementById('age').value;
+        var inputheight = document.getElementById('height').value;
+        var inputProfession = document.getElementById('Profession').value;
+        var inputreligion = document.getElementById('religion').value;
+        var inputEthnicity = document.getElementById('Ethnicity').value;
+        var inputKids = document.getElementById('Kids').value;
+        var inputPolitical = document.getElementById('Political').value;
+        var inputVaccinated = document.getElementById('Vaccinated').value;
+        var inputsmoking = document.getElementById('smoking').value;
+        var inputweed = document.getElementById('weed').value;
+        var inputdrugs = document.getElementById('drugs').value;
+        var inputdrinking = document.getElementById('drinking').value;
+        var inputminage = document.getElementById('minage').value;
+        var inputmaxage = document.getElementById('maxage').value;
+        var inputminheight = document.getElementById('minheight').value;
+        var inputmaxheight = document.getElementById('maxheight').value;
+        ////
+        var inputsmoking1 = document.getElementById('smoking1').checked;
+        var inputsmoking2 = document.getElementById('smoking2').checked;
+        var inputsmoking3 = document.getElementById('smoking3').checked;
+        let smokingarray=[]
+        let weedarray=[]
+        let drugsarray=[]
+        let drinkingarray=[]
+        let professionsarray=[]
+        let religionsarray=[]
+        let ethnicityarray=[]
+        let kidarray=[]
+        let politicalarray=[]
+        let vaxarray=[]
+        if (inputsmoking1 = true){
+            smokingarray.push("Yes")
+        }
+        if (inputsmoking2 = true){
+            smokingarray.push("No")
+        }
+        if (inputsmoking3 = true){
+            smokingarray.push("Sometimes")
+        }
+        var inputweed1 = document.getElementById('weed1').checked;
+        var inputweed2 = document.getElementById('weed2').checked;
+        var inputweed3 = document.getElementById('weed3').checked;
+        if (inputweed1 = true){
+            weedarray.push("Yes")
+        }
+        if (inputweed2 = true){
+            weedarray.push("No")
+        }
+        if (inputweed3 = true){
+            weedarray.push("Sometimes")
+        }
+        var inputdrugs1 = document.getElementById('drugs1').checked;
+        var inputdrugs2 = document.getElementById('drugs2').checked;
+        var inputdrugs3 = document.getElementById('drugs3').checked;
+        if (inputdrugs1 = true){
+            drugsarray.push("Yes")
+        }
+        if (inputdrugs2 = true){
+            drugsarray.push("No")
+        }
+        if (inputdrugs3 = true){
+            drugsarray.push("Sometimes")
+        }
+        var inputdrinking1 = document.getElementById('drinking1').checked;
+        var inputdrinking2 = document.getElementById('drinking2').checked;
+        var inputdrinking3 = document.getElementById('drinking3').checked;
+        if (inputdrinking1 = true){
+            drinkingarray.push("Yes")
+        }
+        if (inputdrinking2 = true){
+            drinkingarray.push("No")
+        }
+        if (inputdrinking3 = true){
+            drinkingarray.push("Sometimes")
+        }
+        var inputprofession1 = document.getElementById('profession1').checked;
+        var inputprofession2 = document.getElementById('profession2').checked;
+        var inputprofession3 = document.getElementById('profession3').checked;
+        if (inputprofession1 = true){
+            professionsarray.push("Entrepreneur")
+        }
+        if (inputprofession2 = true){
+            professionsarray.push("Corporate Worker")
+        }
+        if (inputprofession3 = true){
+            professionsarray.push("Employee")
+        }
+        var inputreligion3 = document.getElementById('religion4').checked;
+        var inputreligion1 = document.getElementById('religion1').checked;
+        var inputreligion2 = document.getElementById('religion2').checked;
+        var inputreligion3 = document.getElementById('religion3').checked;
+        if (inputreligion4 = true){
+            religionsarray.push("None")
+        }
+        if (inputreligion1 = true){
+            religionsarray.push("Christian")
+        }
+        if (inputreligion2 = true){
+            religionsarray.push("Athiest")
+        }
+        if (inputreligion3 = true){
+            religionsarray.push("Spiritual")
+        }
+        var inputethnicity1 = document.getElementById('ethnicity1').checked;
+        var inputethnicity2 = document.getElementById('ethnicity2').checked;
+        var inputethnicity3 = document.getElementById('ethnicity3').checked;
+        if (inputethnicity1 = true){
+            ethnicityarray.push("Black")
+        }
+        if (inputethnicity2 = true){
+            ethnicityarray.push("White")
+        }
+        if (inputethnicity3 = true){
+            ethnicityarray.push("Asian")
+        }
+        var inputkids1 = document.getElementById('kids1').checked;
+        var inputkids2 = document.getElementById('kids2').checked;
+        var inputkids3 = document.getElementById('kids3').checked;
+        if (inputkids1 = true){
+            kidarray.push("Have Kids")
+        }
+        if (inputkids2 = true){
+            kidarray.push("Do Not Want Kids")
+        }
+        if (inputkids3 = true){
+            kidarray.push("Want Kids Eventually")
+        }
+        var inputpolitical1 = document.getElementById('political1').checked;
+        var inputpolitical2 = document.getElementById('political2').checked;
+        var inputpolitical3 = document.getElementById('political3').checked;
+        if (inputpolitical1 = true){
+            politicalarray.push("Conservative")
+        }
+        if (inputpolitical2 = true){
+            politicalarray.push("Liberal")
+        }
+        if (inputpolitical3 = true){
+            politicalarray.push("Do Not Care")
+        }
+        var inputvaccinated1 = document.getElementById('vaccinated1').checked;
+        var inputvaccinated2 = document.getElementById('vaccinated2').checked;
+        if (inputvaccinated1 = true){
+            vaxarray.push("Vaccinated")
+        }
+        if (inputvaccinated2 = true){
+            vaxarray.push("Unvaxxed")
+        }
+
+
+        ///FIRST we're going to assign their ID (Place in array) for easier lookup later.
+        let howmanyuserstemp=UsersandData.length
+
+        ////Now we'll create the user!
+        UsersandData.push({
+        myid: howmanyuserstemp, //This assigns their "place" in the Array.
+        gender: inputgender, //Man or Woman
+        firstname: inputfname,
+        agenumber: inputage, //18-60 years
+        height: inputheight, //in cm
+        Prompts: ["","","","","",""],
+        RatingProfileAccuraccy: "",
+        RatingFunness: "",
+        RatingOverallDate: "",
+        Smoking: inputsmoking,
+        Weed: inputweed,
+        Drugs: inputdrugs,
+        Drinking: inputdrinking,
+        Profession: inputProfession,
+        Religion: inputreligion,
+        Ethnicity: inputEthnicity,
+        Children: inputKids,
+        Political: inputPolitical,
+        Vaxstatus: inputVaccinated,
+        profilepics: [randomizephoto(inputgender),"N/A","N/A","N/A","N/A","N/A"],
+        question: [randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer(),randomizeanswer()],
+        ////EVERYTHING Above this line is for editing THEIR info.
+        //Everything BELOW this line is for "search settings"
+        searchagerange: [inputminage,inputmaxage], //min, max - 0,999 means "All"
+        searchheight: [inputminheight,inputmaxheight], //in cm - 0,999 means "All"
+        searchlocation: 50, //50km radius
+        searchwillingtotravel: ["Globally"], //Sort of like "Dealbreaker"... Can select "Only Within 50km radius", "Within State/Province", //"Within Country", "Globally"
+        searchSmoking: smokingarray, //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
+        searchWeed: weedarray, //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
+        searchDrugs: drugsarray, //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
+        searchDrinking: drinkingarray, //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
+        searchProfession: professionsarray, //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
+        searchReligion: religionsarray, //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
+        searchEthnicity: ethnicityarray, //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
+        searchChildren: kidarray, //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
+        searchPolitical: politicalarray, //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
+        searchVaxstatus: vaxarray, //If blank, it means "doesn't matter", otherwise whatever is listed is ONLY what shows up.
+        ///Last thing is who they matched with!!
+        whoimatchwith: [],
+        whoiswipedon: [],
+        });
+        massusers(99)
+        CompareUsers(howmanyuserstemp)
+        console.log(UsersandData)
+        save()
+        saveuserid(howmanyuserstemp)
+        // similar behavior as an HTTP redirect
+        window.location.replace("/index.html");
+        //UsersandData[howmanyuserstemp].agenumber=dataofbirth(UsersandData[howmanyuserstemp].birthmonth,UsersandData[howmanyuserstemp].birthday,UsersandData[howmanyuserstemp].birthyear)
+        
+
+    });
+}
+
+
+
+function change2(){
+    var image = document.getElementById('MainIm')
+    image.src = currentmatchphoto();
+
+    document.getElementById('fnameage').innerHTML = (UsersandData[sessionmatchid].firstname + ", " + UsersandData[sessionmatchid].agenumber);
+
+    let tempA= UsersandData[myuserid].whoimatchwith[sessionmatchindex]
+    document.getElementById('compatibilityratio').innerHTML = ((tempA[2]*100) + "%");
+
+    document.getElementById('topinfoagegendercompatibilitytext1').innerHTML = (UsersandData[sessionmatchid].agenumber + " | " + UsersandData[sessionmatchid].gender + " | " + (tempA[2]*100) + "% Compatible");
+
+    document.getElementById('work1').innerHTML = (UsersandData[sessionmatchid].Profession)
+
+    document.getElementById('eth1').innerHTML = (UsersandData[sessionmatchid].Ethnicity)
+
+    document.getElementById('rel1').innerHTML = (UsersandData[sessionmatchid].Religion)
+
+    document.getElementById('kid1').innerHTML = (UsersandData[sessionmatchid].Children)
+
+    document.getElementById('pol1').innerHTML = (UsersandData[sessionmatchid].Political)
+
+    document.getElementById('vax1').innerHTML = (UsersandData[sessionmatchid].Vaxstatus)
+
+    let tempB=""
+    let tempC=""
+    let tempD=""
+    let tempE=""
+
+    if (UsersandData[sessionmatchid].Smoking === "Yes"){tempB = 'Yes I Smoke'}
+    if (UsersandData[sessionmatchid].Smoking === "No"){tempB = 'No Smoking'}
+    if (UsersandData[sessionmatchid].Smoking === "Sometimes"){tempB = 'Sometimes Smoke'}
+
+    document.getElementById('smok1').innerHTML = (tempB)
+
+    if (UsersandData[sessionmatchid].Weed === "Yes"){tempC = 'Yes I Do Weed'}
+    if (UsersandData[sessionmatchid].Weed === "No"){tempC = 'No Weed'}
+    if (UsersandData[sessionmatchid].Weed === "Sometimes"){tempC = 'Sometimes Weed'}
+
+    document.getElementById('weed1').innerHTML = (tempC)
+
+    if (UsersandData[sessionmatchid].Drugs === "Yes"){tempD = 'Yes I Do Drugs'}
+    if (UsersandData[sessionmatchid].Drugs === "No"){tempD = 'No Drugs'}
+    if (UsersandData[sessionmatchid].Drugs === "Sometimes"){tempD = 'Sometimes Drugs'}
+
+    document.getElementById('drug1').innerHTML = (tempD)
+
+    if (UsersandData[sessionmatchid].Drinking === "Yes"){tempE = 'Yes I Drink'}
+    if (UsersandData[sessionmatchid].Drinking === "No"){tempE = 'No Drinking'}
+    if (UsersandData[sessionmatchid].Drinking === "Sometimes"){tempE = 'Sometimes Drinking'}
+
+    document.getElementById('drunk1').innerHTML = (tempE)
+    
+}
+
+/* - Doesn't do anything anymore.
+function haveiswipedonthem(tempmatchid){
+    for (let s1 = 0; s1 < UsersandData[myuserid].whoiswipedon.length; s1++) {
+        if (tempmatchid = UsersandData[myuserid].whoiswipedon[sessionmatchindex]){
+            sessionmatchindex=sessionmatchindex+1
+            change2()
+        }
+    }
+}
+*/
+
+const swipebutton=document.getElementById('interestedbutt')
+const rejectbutton=document.getElementById('notinterestedbutt')
+swipebutton.addEventListener('click', function () {swipe()})
+rejectbutton.addEventListener('click', function () {swipe()})
+
+function swipe(){
+    UsersandData[myuserid].whoiswipedon.push(sessionmatchid)
+    sessionmatchindex=sessionmatchindex+1
+    change2()
+    window.scrollTo(0, 0);
+}
+
+function currentmatchphoto(){
+    let tempthing = UsersandData[myuserid].whoimatchwith[sessionmatchindex] //This changes
+    sessionmatchid=tempthing[0] //This stays as "Zero" to get the ID of my match
+    checkgender()
+    return(UsersandData[sessionmatchid].profilepics[0]) //this stays as Zero... (Cause only 1 pic rn)
+}
+
+function checkgender(){
+    if (UsersandData[myuserid].gender===UsersandData[sessionmatchid].gender){
+        UsersandData[myuserid].whoiswipedon.push(sessionmatchid)
+        sessionmatchindex=sessionmatchindex+1
+        let tempthing2 = UsersandData[myuserid].whoimatchwith[sessionmatchindex]
+        sessionmatchid=tempthing2[0]
+        console.log("Avoided S.S.")
+        checkgender()
+    }
+}
+
+
+//Remember!!
+//function cleardatabse(){
+    //localStorage.clear('data')
+//}
+

@@ -3,9 +3,6 @@
     <head>
         <link rel="stylesheet" href="CreateUserStyles.css">
         <link rel="stylesheet" href="styles.css">
-        <script
-            src="script.js">
-        </script>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,6 +58,7 @@
             <br>
             <label for="religion">Are You Spiritually Inclined?</label>
             <select name="religion" id="religion">
+            <option value="None">None</option>
             <option value="Christian">Christian</option>
             <option value="Athiest">Athiest</option>
             <option value="Spiritual">Spiritual</option>
@@ -200,6 +198,8 @@
             <br>
             <br>
             <h2 class="checkboxprompt">Compatible Religions:</h2>
+            <input type="checkbox" id="religion4" class="checkboxes" name="religion4" value="None"> <!--Checkboxes!!-->
+            <label for="religion4">None</label><br>
             <input type="checkbox" id="religion1" class="checkboxes" name="religion1" value="Christian"> <!--Checkboxes!!-->
             <label for="religion1">Christian</label><br>
             <input type="checkbox" id="religion2" class="checkboxes" name="religion2" value="Athiest">
@@ -210,11 +210,11 @@
             <br>
             <h2 class="checkboxprompt">Desired Ethnicity:</h2>
             <input type="checkbox" id="ethnicity1" class="checkboxes" name="ethnicity1" value="Black"> <!--Checkboxes!!-->
-            <label for="ethnicity1">Christian</label><br>
+            <label for="ethnicity1">Black</label><br>
             <input type="checkbox" id="ethnicity2" class="checkboxes" name="ethnicity2" value="White">
-            <label for="ethnicity2">Athiest</label><br>
+            <label for="ethnicity2">White</label><br>
             <input type="checkbox" id="ethnicity3" class="checkboxes" name="ethnicity3" value="Asian">
-            <label for="ethnicity3">Spiritual</label>
+            <label for="ethnicity3">Asian</label>
             <br>
             <br>
             <h2 class="checkboxprompt">Kid Compatibility:</h2>
@@ -244,13 +244,18 @@
             <br>
         </div>
 
-        <button class="submitbutton">Submit</button>
+        <button id="submitbutton">Submit</button>
 
         <div class="spacerfinal1">
             
         </div>
 
+        <script
+        src="script.js">
+        </script>
+
         <script>
+            
             var inputBox = document.getElementById('fname'); //This allows a change to the main header-text! :)
             inputBox.onkeyup = function(){
                 document.getElementById('HeaderofPage').innerHTML = ("Welcome " + inputBox.value + "!");
@@ -264,6 +269,7 @@
                 }
             }
             window.onload = togglecheckboxes;
+            
         </script>
 
 
