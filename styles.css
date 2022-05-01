@@ -71,7 +71,7 @@ body {   padding: 0;   margin: 0;}
 #fnameage{
     margin: 0px;
     padding: 0px;
-    font-family: "Montserrat", "Source Sans Pro", "Raleway";
+    font-family: "Raleway", "Montserrat", "Source Sans Pro";
     font-weight:normal;
     font-size: 25px;
 }
@@ -94,7 +94,7 @@ body {   padding: 0;   margin: 0;}
     margin: 0px;
     padding: 0px;
     color: rgb(219, 56, 255);
-    font-family: "Montserrat", "Source Sans Pro", "Raleway";
+    font-family: "Raleway", "Montserrat", "Source Sans Pro";
     font-weight:normal;
     font-size: 17px;
     text-align: right;
@@ -125,7 +125,7 @@ body {   padding: 0;   margin: 0;}
 .topinfoagegendercompatibilitytext {
     margin: 0px;
     padding: 0px;
-    font-family: "Montserrat", "Source Sans Pro", "Raleway";
+    font-family: "Raleway", "Montserrat", "Source Sans Pro";
     font-weight:normal;
     font-size: 16px;
 }
@@ -142,7 +142,7 @@ body {   padding: 0;   margin: 0;}
     margin: 0px;
     padding: 0px;
     margin-top: 2px;
-    font-family: "Montserrat", "Source Sans Pro", "Raleway";
+    font-family: "Raleway", "Montserrat", "Source Sans Pro";
     font-weight:normal;
     font-size: 13px;
 }
@@ -160,7 +160,7 @@ body {   padding: 0;   margin: 0;}
 .infoiconsX{
     margin: 0px;
     padding: 0px;
-    margin-top: 4px;
+    margin-top: 3px;
     width: 12px;
     height: auto;
     
@@ -170,8 +170,8 @@ body {   padding: 0;   margin: 0;}
 .infotextX {
     margin: 0px;
     padding: 0px;
-    margin-top: 2px;
-    font-family: "Montserrat", "Source Sans Pro", "Raleway";
+    margin-top: 3px;
+    font-family: "Raleway", "Montserrat", "Source Sans Pro";
     font-weight:normal;
     font-size: 11px;
 }
@@ -209,7 +209,7 @@ body {   padding: 0;   margin: 0;}
     border-color: rgb(167, 167, 167);
     border-style: solid;
     border-radius: 10px;
-    font-family:"Montserrat", "Source Sans Pro", "Raleway";
+    font-family:"Raleway", "Montserrat", "Source Sans Pro";
 }
 
 .spacerfinal{
