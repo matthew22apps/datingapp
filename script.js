@@ -1034,7 +1034,9 @@ if (document.getElementById("submitbutton")!==null){
 
 function change2(){
     var image = document.getElementById('MainIm')
+    var image2 = document.getElementById('MainIm2')////TESTING
     image.src = currentmatchphoto();
+    image2.src = nextmatchphoto();
 
     document.getElementById('fnameage').innerHTML = (UsersandData[sessionmatchid].firstname + ", " + UsersandData[sessionmatchid].agenumber);
 
@@ -1127,6 +1129,12 @@ function currentmatchphoto(){
     sessionmatchid=tempthing[0] //This stays as "Zero" to get the ID of my match
     checkgender()
     return(UsersandData[sessionmatchid].profilepics[0]) //this stays as Zero... (Cause only 1 pic rn)
+}
+
+function nextmatchphoto(){ ///Used to pre-load next image!!
+    let tempthing2 = UsersandData[myuserid].whoimatchwith[(sessionmatchindex+1)] //This changes
+    sessionmatchid2=tempthing2[0] //This stays as "Zero" to get the ID of my match
+    return(UsersandData[sessionmatchid2].profilepics[0]) //this stays as Zero... (Cause only 1 pic rn)
 }
 
 function checkgender(){
