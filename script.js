@@ -942,7 +942,7 @@ function randomizefirstname(gender){ //Returns random answer from 0-3
         save()
         saveuserid(howmanyuserstemp)
         // similar behavior as an HTTP redirect
-        window.location.replace("/index.html");
+        window.location.replace("/MatchNow");
         //UsersandData[howmanyuserstemp].agenumber=dataofbirth(UsersandData[howmanyuserstemp].birthmonth,UsersandData[howmanyuserstemp].birthday,UsersandData[howmanyuserstemp].birthyear)
         
 
