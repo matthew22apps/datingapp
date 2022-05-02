@@ -27,10 +27,10 @@
 
         <div class="headerofpage1" id="headerofpage1">
             <h1 id="HeaderofPage">Welcome!</h1>
-            <h1 class="HeaderofPage2">Let's setup your profile!</h1>
+            <h1 id="head22222" class="HeaderofPage2">Let's setup your profile!</h1>
         </div>
 
-        <div class="inputs">
+        <div id="allinputs" class="inputs">
             <label for="gender">Choose Your Gender:</label>
             <select name="gender" id="gender">
             <option value="Man">Man</option>
@@ -132,11 +132,11 @@
             <br>
         </div>
 
-        <div class="divider"></div>
+        <div id="divideboy" class="divider"></div>
         <br>
-        <div class="inputs">
+        <div id="input222" class="inputs">
 
-            <h1 class="HeaderofPage2">What are you looking for?</h1>
+            <h1 id="biguy" class="HeaderofPage2">What are you looking for?</h1>
             <br><br>
             <label for="minage">Min Age Range:</label>
             <input type="number" id="minage" name="minage">
@@ -246,20 +246,22 @@
             <br>
         </div>
 
-        <button id="submitbutton" onclick="buttonclickstart()">Submit</button>
+        <button id="submitbutton" class="submitnowbutton" onclick="buttonclickstart()">Submit</button>
         <img id="load1" class="loadingimage" src="ProfilePhotos/Loading2.gif">
         <h3 id="load2" class="instruct">Please wait a few seconds for page to load after clicking the button</h3>
 
 
         <div class="spacerfinal1">
+        <button id="loginbutton" onclick="loginalready()">Login Here</button>
         <button id="resetbutton" onclick="cleardatabse()">Need to reset your account? Click here.</button>
-            
         </div>
 
         <script
         src="script.js">
         </script>
-
+        <script
+        src="other.js">
+        </script>
         <script>
             
             var inputBox = document.getElementById('fname'); //This allows a change to the main header-text! :)

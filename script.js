@@ -754,6 +754,7 @@ function cleardatabse(){
 localStorage.clear('data')
 localStorage.clear('userid')
 console.log("Account Reset")
+location.reload();
 }
 
 
@@ -1025,8 +1026,14 @@ if (document.getElementById("submitbutton")!==null){
         saveuserid(howmanyuserstemp)
         // similar behavior as an HTTP redirect
         if (window.location.href === "https://matthew22apps.github.io/datingapp/CreateUser"){
-        window.location.replace("https://matthew22apps.github.io/datingapp/");}
-        else{window.location.replace("file:///C:/Users/Matth/repos/datingapp/index.html");}
+            window.location.replace("https://matthew22apps.github.io/datingapp/");
+        }
+        else{if (window.location.href === "http://127.0.0.1:5500/CreateUser.html"){
+            window.location.replace("http://127.0.0.1:5500/index.html");
+            }else{
+            window.location.replace("file:///C:/Users/Matth/repos/datingapp/index.html");
+            }
+        }
         //UsersandData[howmanyuserstemp].agenumber=dataofbirth(UsersandData[howmanyuserstemp].birthmonth,UsersandData[howmanyuserstemp].birthday,UsersandData[howmanyuserstemp].birthyear)
 }
 
@@ -1160,11 +1167,24 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     document.body.style.margin = 'auto'
 }
 
-
-
-
 //Remember!!
 //function cleardatabse(){
     //localStorage.clear('data')
 //}
 
+
+function demotest(){
+    let howmanyuserstemp=UsersandData.length
+    massusers(100)
+    UsersandData[0].gender="Man"
+    for (let m10 = 0; m10 < 5; m10++) {
+        massusers(100)
+        save()
+    }
+    UsersandData[0].gender="Man"
+    CompareUsers(howmanyuserstemp)
+    console.log(UsersandData)
+    save()
+    saveuserid(howmanyuserstemp)
+    // location.reload();
+}

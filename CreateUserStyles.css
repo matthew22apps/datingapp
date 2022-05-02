@@ -53,12 +53,7 @@
     text-align: center;
 }
 
-.divider{
-    width:50%;
-    background-color: black;
-    height: 2px;
-    margin: auto;
-}
+
 
 .checkboxprompt{
     margin: 0px;
@@ -83,6 +78,7 @@
     border-style: solid;
     border-radius: 10px;
     font-family: "Raleway", "Montserrat", "Source Sans Pro";
+    display: none;
 }
 
 .spacerfinal1{
@@ -123,4 +119,35 @@
     border-style: solid;
     border-radius: 10px;
     font-family: "Raleway", "Montserrat", "Source Sans Pro";
+}
+
+#loginbutton{
+    display:block;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px 30px 10px 30px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(76, 76, 76);
+    border-radius: 1px;
+    border-color: rgb(76, 76, 76);
+    border-style: solid;
+    border-radius: 10px;
+    font-family: "Raleway", "Montserrat", "Source Sans Pro";
+}
+
+.inputs{
+    display: none;
+}
+
+.divider{
+    width:50%;
+    background-color: black;
+    height: 2px;
+    margin: auto;
+    display: none;
+}
+
+.HeaderofPage2{
+    display: none;
 }
