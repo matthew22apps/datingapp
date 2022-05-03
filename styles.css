@@ -1,224 +1,363 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 .TopBar{
-    margin: auto;
-    display: flex;
-    width: 90%;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-    /*
-    
-    padding-bottom: 20px;
-    background-color: #FFFFFF;
-    align-items: center;
-    gap: 0px;
-    flex-wrap: wrap;
-    */
+margin: auto;
+display: flex;
+width: 90%;
+text-align: center;
+align-items: center;
+justify-content: space-between;
+align-content: center;
+/*
+
+padding-bottom: 20px;
+background-color: #FFFFFF;
+align-items: center;
+gap: 0px;
+flex-wrap: wrap;
+*/
 }
 
 .TopBarBackground{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px;
-    background-image: linear-gradient(to right, rgb(225, 116, 255) , rgb(156, 237, 255));
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 0px;
+padding-right: 0px;
+margin: 0px;
+background-image: linear-gradient(to right, #CFB7FC , #AA85FE, #68BFF2,#A2DAFB);
 }
 
 .TopElement{
-    display: flex;
-    max-width: 50%;
+display: flex;
+max-width: 50%;
 }
 
 .topimages{
-    width: 25px;
-    max-width: 100%;
-    height: auto;
+width: 25px;
+max-width: 100%;
+height: auto;
 }
 
 body {   padding: 0;   margin: 0;}
 
 .mainimagecontainer {
-    width: 100%;
-  }
-  
+width: 100%;
+}
+
 .MainImage {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-    object-fit: cover;
+width: 100%;
+height: auto;
+aspect-ratio: 1;
+object-fit: cover;
 }
 
 .information { /* Set text color to red */
-    display: flex;
-    justify-content: space-between;
-    position:relative;
-    bottom:55px;
-    background-color: white;
-    border-radius: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
- }
+display: flex;
+justify-content: space-between;
+position:relative;
+bottom:55px;
+background-color: white;
+border-radius: 20px;
+padding-left: 20px;
+padding-right: 20px;
+}
 
 .leftside {
-    display: flex;
-    justify-content: center;
-    vertical-align: top;
-    align-items: flex-start;
-    margin-top: 20px;
+display: flex;
+justify-content: center;
+vertical-align: top;
+align-items: flex-start;
+margin-top: 20px;
 }
 
 #fnameage{
-    margin: 0px;
-    padding: 0px;
-    font-family: "Raleway", "Montserrat", "Source Sans Pro";
-    font-weight:normal;
-    font-size: 25px;
+margin: 0px;
+padding: 0px;
+font-family: "Raleway", "Montserrat", "Source Sans Pro";
+font-weight:normal;
+font-size: 25px;
 }
 
 .Check{
-    margin: 0px;
-    padding: 0px;
-    margin-top: 5px;
-    width: 20px;
-    height: auto;
-    
-    padding-right: 10px;
+margin: 0px;
+padding: 0px;
+margin-top: 5px;
+width: 20px;
+height: auto;
+
+padding-right: 10px;
 }
 
 .rightside{
-    margin-top: 20px;
+margin-top: 20px;
 }
 
 .compatibilityratio1{
-    margin: 0px;
-    padding: 0px;
-    color: rgb(219, 56, 255);
-    font-family: "Raleway", "Montserrat", "Source Sans Pro";
-    font-weight:normal;
-    font-size: 17px;
-    text-align: right;
+margin: 0px;
+padding: 0px;
+color: #AA85FE;
+font-family: "Raleway", "Montserrat", "Source Sans Pro";
+font-weight:normal;
+font-size: 17px;
+text-align: right;
 }
 
 .seewhy{
-    float: right;
-    margin: 0px;
-    margin-top: 5px;
-    font-size: 8px;
-    padding: 3px 15px 3px 15px;
-    background-color: rgb(219, 56, 255);
-    color: white;
-    border: 0px;
-    border-radius: 30px;
+float: right;
+margin: 0px;
+margin-top: 5px;
+font-size: 8px;
+padding: 3px 15px 3px 15px;
+background-color: #AA85FE;
+color: white;
+border: 0px;
+border-radius: 30px;
 }
 
 .whoiam{
+width: 80%;
+margin:auto;
+margin-top: -20px;
+padding: 20px;
+background-color: rgb(222, 222, 222);
+border-radius: 15px;
+
+}
+
+.whoiam2{
     width: 80%;
     margin:auto;
-    margin-top: -15px;
+    margin-top: 50px;
     padding: 20px;
     background-color: rgb(222, 222, 222);
     border-radius: 15px;
-
-}
+    
+    }
 
 .topinfoagegendercompatibilitytext {
-    margin: 0px;
-    padding: 0px;
-    font-family: "Raleway", "Montserrat", "Source Sans Pro";
-    font-weight:normal;
-    font-size: 16px;
+margin: 0px;
+padding: 0px;
+font-family: "Raleway", "Montserrat", "Source Sans Pro";
+font-weight:normal;
+font-size: 16px;
 }
 
 .biglistinfo{
-    display: flex;
-    justify-content: left;
-    vertical-align: top;
-    align-items: flex-start;
-    margin-top: 5px;
+display: flex;
+justify-content: left;
+vertical-align: top;
+align-items: flex-start;
+margin-top: 5px;
 }
 
 .infotext {
-    margin: 0px;
-    padding: 0px;
-    margin-top: 2px;
-    font-family: "Raleway", "Montserrat", "Source Sans Pro";
-    font-weight:normal;
-    font-size: 13px;
+margin: 0px;
+padding: 0px;
+margin-top: 2px;
+font-family: "Raleway", "Montserrat", "Source Sans Pro";
+font-weight:normal;
+font-size: 13px;
 }
 
 .infoicons{
-    margin: 0px;
-    padding: 0px;
-    margin-top: 0px;
-    width: 20px;
-    height: auto;
-    
-    padding-right: 10px;
+margin: 0px;
+padding: 0px;
+margin-top: 0px;
+width: 20px;
+height: auto;
+
+padding-right: 10px;
 }
 
 .infoiconsX{
-    margin: 0px;
-    padding: 0px;
-    margin-top: 3px;
-    width: 12px;
-    height: auto;
-    
-    padding-right: 10px;
+margin: 0px;
+padding: 0px;
+margin-top: 3px;
+width: 12px;
+height: auto;
+
+padding-right: 10px;
 }
 
 .infotextX {
-    margin: 0px;
-    padding: 0px;
-    margin-top: 3px;
-    font-family: "Raleway", "Montserrat", "Source Sans Pro";
-    font-weight:normal;
-    font-size: 11px;
+margin: 0px;
+padding: 0px;
+margin-top: 3px;
+font-family: "Raleway", "Montserrat", "Source Sans Pro";
+font-weight:normal;
+font-size: 11px;
 }
 
 .spacer{
-    margin:0px;
-    padding:0px;
+margin:0px;
+padding:0px;
 }
 
 .interestedbutton {
-    background-color: #ffffff;
-    padding: 8px;
-    border-radius: 100%;
-    width: 30px;
-    float: right;
-    margin-top: -25px;
-    margin-right: 50px;
-    
+background-color: #ffffff;
+padding: 8px;
+border-radius: 100%;
+width: 30px;
+float: right;
+margin-top: -25px;
+margin-right: 50px;
+z-index: 5;
+position: relative;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
 
 .notinterested{
-    margin-top: 50px;
+margin-top: 50px;
 }
 
 .notinbutton{
-    display:block;
-    margin: 0 auto;
-    margin-top: 5px;
-    font-size: 13px;
-    padding: 10px 30px 10px 30px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(167, 167, 167);
-    border-radius: 1px;
-    border-color: rgb(167, 167, 167);
-    border-style: solid;
-    border-radius: 10px;
-    font-family:"Raleway", "Montserrat", "Source Sans Pro";
+display:block;
+margin: 0 auto;
+margin-top: 5px;
+font-size: 13px;
+padding: 10px 30px 10px 30px;
+background-color: rgb(255, 255, 255);
+color: rgb(167, 167, 167);
+border-radius: 1px;
+border-color: rgb(167, 167, 167);
+border-style: solid;
+border-radius: 10px;
+font-family:"Raleway", "Montserrat", "Source Sans Pro";
 }
 
 .spacerfinal{
-    margin:50px;
-    padding:0px;
+margin:50px;
+padding:0px;
 }
 
 #MainIm2{
-    display:none;
+display:none;
 }
+
+
+.promptdiv{
+width: 80%;
+margin:auto;
+margin-top: 50px;
+padding: 20px;
+background-color: rgb(255, 255, 255);
+border-radius: 15px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.prompttype{
+margin: 0px;
+padding: 0px;
+font-family: "Raleway", "Montserrat", "Source Sans Pro";
+font-weight:bold;
+font-size: 14px;
+}
+.promptanswer{
+margin: 0px;
+padding: 0px;
+margin-top: 10px;
+font-family: "Raleway", "Montserrat", "Source Sans Pro";
+font-weight:normal;
+font-size: 20px;
+line-height:1.3;
+}
+
+.photodiv{
+background-color: rgb(255, 255, 255);
+}
+
+.photoimagediv{
+display: block;
+margin: 0 auto;
+width: 88%;
+margin-top: 50px;
+height: auto;
+aspect-ratio: 1;
+object-fit: cover;
+border-radius: 15px;
+}
+
+
+.square {
+background-image:url("ProfilePhotos/Women/17.jpg");
+background-position: center;
+width: 100%;
+height: 100vw;
+margin: auto;
+background-attachment: fixed;
+background-size: cover;
+}
+
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar1 {
+background-color: #EEF9FF;
+position: fixed;
+bottom: 0;
+width: 100%;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+z-index: 100;
+transition: bottom 0.5s;
+padding-top: 14px;
+padding-bottom: 14px;
+}
+
+.iconslisted{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.bottomicons{
+    width: 20px;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+text-align: center;
+align-items: center;
+align-content: center;
+}
+
+.topimages2{
+width: 22px;
+max-width: 100%;
+height: auto;
+}
+
+.TopBar2{
+margin: auto;
+display: flex;
+width: 90%;
+text-align: center;
+align-items: center;
+justify-content: space-between;
+align-content: center;
+padding-top: 5px;
+padding-bottom: 5px;
+/*
+
+padding-bottom: 20px;
+background-color: #FFFFFF;
+align-items: center;
+gap: 0px;
+flex-wrap: wrap;
+*/
+}
+
+.TopBarBackground2{
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 0px;
+padding-right: 0px;
+margin: 0px;
+background-image: linear-gradient(to right, #CFB7FC , #AA85FE, #68BFF2,#A2DAFB);
+}
+
+.TopElement2{
+display: flex;
+max-width: 50%;
+}
+
+
