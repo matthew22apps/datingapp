@@ -38,7 +38,11 @@ max-width: 100%;
 height: auto;
 }
 
-body {   padding: 0;   margin: 0;}
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: linear-gradient(to right, #CFB7FC , #AA85FE, #68BFF2,#A2DAFB);
+}
 
 .mainimagecontainer {
 width: 100%;
@@ -227,8 +231,9 @@ font-family:"Raleway", "Montserrat", "Source Sans Pro";
 }
 
 .spacerfinal{
-margin:50px;
-padding:0px;
+margin:0px;
+padding:30px;
+background-color: white;
 }
 
 #MainIm2{
@@ -360,7 +365,6 @@ display: flex;
 max-width: 50%;
 }
 
-
-.body{
-    
+.whitepage{
+    background-color: white;
 }

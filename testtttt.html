@@ -1,0 +1,121 @@
+<script>
+    function httpGet(theUrl){
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+        xmlHttp.send( null );
+        return xmlHttp.responseText;
+    }
+
+    function u22(){
+        if (contactId !== "" && contactId != null && inf_custom_invitecode !== "" && inf_custom_invitecode != null){
+            console.log("Checking Status")
+            var results1 = httpGet("https://hook.integromat.com/hnhxfbl412hvgnnarwi5e27027nwynyg?contactId="+contactId+"&email="+inf_field_Email+"&phone="+inf_field_Phone1+"&referralid="+inf_custom_invitecode)
+            if (results1 === "nomorecodes"){
+                document.getElementById("tmp_headline1-58598-176").style.display = "block";
+            }
+            if (results1 === "invalidcode"){
+                document.getElementById("headline-34452-143").style.display = "block";
+            }
+            if (results1 === "successfulcode"){
+                document.getElementById("headline-74385-178").style.display = "block";
+            }
+            if (results1 === "aldreadyregistered"){
+                document.getElementById("headline-66185-130").style.display = "block";
+            }
+            document.getElementById("row--31767").style.display = "none";
+            console.log(results1)
+        }else{console.log("Did not run - No parameters.")}
+    }
+</script>
+
+<script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\amp;");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    var contactId = getParameterByName('contactId')
+    var inf_field_Email = getParameterByName('inf_field_Email')
+    if (inf_field_Email != null){
+        inf_field_Email.replace('%40','@')
+    }
+    var inf_field_Phone1 = getParameterByName('inf_field_Phone1')
+    var inf_custom_invitecode = getParameterByName('inf_custom_invitecode')
+    console.log("Page Ready")
+    window.onload=u22;
+</script>
+
+
+
+<!--LLAMA POWER-->
+
+
+<div class="row bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" id="row--27752" data-trigger="none" data-animate="fade" data-delay="500" data-title="1 column row" style="padding-top: 20px; padding-bottom: 20px; margin: 0px; outline: none;">
+    <div id="col-full-137-101" class="col-md-12 innerContent col_left" data-col="full" data-trigger="none" data-animate="fade" data-delay="500" data-title="1st column" style="outline: none;"><div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">
+    <div class="de elHeadlineWrapper ui-droppable de-editable" id="tmp_headline1-66647-151" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 0px; outline: none; cursor: pointer;" aria-disabled="false">
+    <h1 class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: center; font-size: 14px; color: rgb(255, 255, 255);" data-bold="inherit" data-gramm="false" contenteditable="false">
+    <font color="#000000"><b>It looks like you received an invite code with up to 3 uses!&nbsp;</b></font><u style="color: rgb(0, 0, 0); font-family: inherit;"><b>HURRY!</b></u><b style="font-family: inherit;"> Use it now to pre-register for <u>early access.</u></b><div><font color="#000000"><b>(Before someone beats you to it...!)</b></font></div>
+    </h1>
+    </div>
+    <div class="de elHeadlineWrapper ui-droppable de-editable" id="headline-69115" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 10px; outline: none; cursor: pointer;" aria-disabled="false">
+    <h1 class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: left; font-size: 16px; color: rgb(0, 0, 0);" data-bold="inherit" data-gramm="false" contenteditable="false"><font color="#ffffff"><b>First Name:</b></font></h1>
+    </div>
+    <div class="de elInputWrapper de-input-block elAlign_center elMargin0 ui-droppable de-editable" id="input-93282-118" data-de-type="input" data-de-editing="false" data-title="input" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" type="first_name" style="margin-top: 5px; outline: none; cursor: pointer;" aria-disabled="false">
+    <input id="inf_field_FirstName" type="first_name" placeholder="First Name" name="first_name" class="elInput elInput100 elAlign_left elInputMid elInputStyl0 elInputBG1 elInputBR5 elInputI0 elInputIBlack elInputIRight ceoinput required1 garlic-auto-save" data-type="extra" data-custom-type="myemail">
+    </div>
+    <div class="de elHeadlineWrapper ui-droppable de-editable" id="headline-17140" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 15px; outline: none; cursor: pointer;" aria-disabled="false">
+    <h1 class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: left; font-size: 16px; color: rgb(0, 0, 0);" data-bold="inherit" data-gramm="false" contenteditable="false"><font color="#ffffff"><b>Last Name:</b></font></h1>
+    </div>
+    <div class="de elInputWrapper de-input-block elAlign_center elMargin0 ui-droppable de-editable" id="input-39764" data-de-type="input" data-de-editing="false" data-title="input" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" type="last_name" style="margin-top: 5px; outline: none; cursor: pointer;" aria-disabled="false">
+    <input id="inf_field_LastName" type="last_name" placeholder="Last Name" name="last_name" class="elInput elInput100 elAlign_left elInputMid elInputStyl0 elInputBG1 elInputBR5 elInputI0 elInputIBlack elInputIRight ceoinput required1 garlic-auto-save" data-type="extra" data-custom-type="myemail">
+    </div>
+    <div class="de elHeadlineWrapper ui-droppable de-editable" id="headline-92692" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 15px; outline: none; cursor: pointer;" aria-disabled="false">
+    <h1 class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: left; font-size: 16px; color: rgb(0, 0, 0);" data-bold="inherit" data-gramm="false" contenteditable="false"><font color="#ffffff"><b>Email:</b></font></h1>
+    </div>
+    <div class="de elInputWrapper de-input-block elAlign_center elMargin0 ui-droppable de-editable" id="input-25052" data-de-type="input" data-de-editing="false" data-title="input" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" type="email" style="margin-top: 5px; outline: none; cursor: pointer;" aria-disabled="false">
+    <input id="inf_field_Email" type="email" placeholder="Email" name="email" class="elInput elInput100 elAlign_left elInputMid elInputStyl0 elInputBG1 elInputBR5 elInputI0 elInputIBlack elInputIRight ceoinput required1 garlic-auto-save" data-type="extra" data-custom-type="myemail">
+    </div>
+    <div class="de elHeadlineWrapper ui-droppable de-editable" id="headline-94318" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 15px; outline: none; cursor: pointer;" aria-disabled="false">
+    <h1 class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: left; font-size: 16px; color: rgb(0, 0, 0);" data-bold="inherit" data-gramm="false" contenteditable="false"><font color="#ffffff"><b>Phone Number:</b></font></h1>
+    </div>
+    <div class="de elInputWrapper de-input-block elAlign_center elMargin0 ui-droppable de-editable" id="input-27395" data-de-type="input" data-de-editing="false" data-title="input" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" type="phone" style="margin-top: 5px; outline: none; cursor: pointer;" aria-disabled="false">
+    <input id="inf_field_Phone1" type="phone" placeholder="Phone" name="phone" class="elInput elInput100 elAlign_left elInputMid elInputStyl0 elInputBG1 elInputBR5 elInputI0 elInputIBlack elInputIRight ceoinput required1 garlic-auto-save" data-type="extra" data-custom-type="myemail">
+    </div>
+    <div class="de elHeadlineWrapper ui-droppable de-editable" id="headline-62086" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 15px; outline: none; cursor: pointer;" aria-disabled="false">
+    <h1 class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0" style="text-align: left; font-size: 16px; color: rgb(0, 0, 0);" data-bold="inherit" data-gramm="false" contenteditable="false"><font color="#ffffff"><b>Invite Code:</b></font></h1>
+    </div>
+    <div class="de elInputWrapper de-input-block elAlign_center elMargin0 ui-droppable de-editable" id="input-37815" data-de-type="input" data-de-editing="false" data-title="input" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" type="custom_type" style="margin-top: 5px; outline: none; cursor: pointer;" aria-disabled="false">
+      <input id="inviteco" type="custom_type" placeholder="Invite Code" name="custom_type" class="elInput elInput100 elAlign_left elInputMid elInputStyl0 elInputBG1 elInputBR5 elInputI0 elInputIBlack elInputIRight es-minUnderDark required1 garlic-auto-save" data-type="extra" data-custom-type="invitecode" readonly>
+    </div>
+    <div class="de elBTN elAlign_center elMargin0 ui-droppable de-editable" id="button-35158-180" data-de-type="button" data-de-editing="false" data-title="button" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 25px; outline: none; cursor: pointer;" data-elbuttontype="1" aria-disabled="false">
+    <a href="#submit-form" class="elButton elButtonSize1 elButtonColor1 elButtonRounded elButtonPadding2 elBtnVP_10 elButtonCorner3 elButtonFluid elBtnHP_25 elBTN_b_1 elButtonShadowN1 elButtonTxtColor1" style="color: rgb(255, 255, 255); font-weight: 600; background-color: rgb(137, 85, 255); font-size: 20px;" rel="noopener noreferrer" id="undefined-371" data-previous-content="<span class=&quot;elButtonMain&quot;>I'm Ready. Sign Me Up!</span><span class=&quot;elButtonSub&quot;></span>" data-href-original="#submit-form"><span class="elButtonMain">I'm Ready. Sign Me Up!</span><span class="elButtonSub"></span></a>
+    </div>
+    </div></div>
+    </div>
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\amp;");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return '';
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        var ContactId = getParameterByName('ContactId')
+        if (ContactId !== "" && ContactId != null && inf_custom_invitecode !== "" && inf_custom_invitecode != null){
+                document.getElementById('inviteco').value=ContactId
+                document.getElementById('headline-76229').innerHTML = ("Invite Code: " + ContactId + ".");
+                document.getElementById('headline-76229').className="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0"
+                document.getElementById('headline-76229').style="text-align: center; font-size: 24px; color: rgb(255, 255, 255); padding-top: 14px;"
+                console.log("ID Available")
+        }else{document.getElementById('inviteco').value="No Code Found"
+            document.getElementById('headline-76229').innerHTML = ("Invite Code Not Found...");
+            document.getElementById('headline-76229').className="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0"
+            document.getElementById('headline-76229').style="text-align: center; font-size: 24px; color: rgb(255, 255, 255);padding-top: 14px;"
+            console.log("ID not available.")}
+    </script>
